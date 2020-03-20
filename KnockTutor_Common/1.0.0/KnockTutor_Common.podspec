@@ -27,6 +27,7 @@ TODO: Add long description of the pod here.
   s.author           = { '9330c5a3c48c466714c96fa858f6412784f1d3ed' => 'uroszivaljevic19@gmail.com' }
   s.source           = { :git => 'git@github.com:Y4sserDev/KnockTutor-Common.git' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.swift_version    = "5.0.0"
 
   s.ios.deployment_target = '12.0'
 
@@ -36,7 +37,14 @@ TODO: Add long description of the pod here.
   #   'KnockTutor_Common' => ['KnockTutor_Common/Assets/*.png']
   # }
 
+  s.static_framework = true
+
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit', 'MapKit'
+  s.dependency 'Firebase/Auth'
+  s.dependency 'Firebase/Messaging'
+  s.dependency 'Firebase/Core'
+  s.dependency 'Firebase/Analytics'
+  s.dependency 'Firebase/Storage'
+  s.dependency 'Firebase/Firestore'
 end
